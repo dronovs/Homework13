@@ -1,0 +1,29 @@
+.header {
+  width: 100%;
+  display: flex;
+  background-color: #f6f2f2;
+}
+.header-wrapper {
+  width: 100%;
+  @include common-style($color: #e0e0e0, $bg:#313030);
+  .menu nav {
+    justify-content: center;
+    display: flex;
+    padding: 45px 0;
+  }
+  li {
+    list-style: none;
+  }
+  
+  li a {
+    @include buttons($padding: 44px 40px, $bg-color: #313030, $border: 2px transparent solid, $text-color: #e0e0e0);
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  
+  li:hover a {
+    @include buttons($padding: 44px 40px, $bg-color: #ff3f40, $border: 2px #ff3f40 solid, $text-color: #e0e0e0);
+  }
+}

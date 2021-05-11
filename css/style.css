@@ -1,0 +1,297 @@
+@charset "UTF-8";
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.container {
+  width: 1250px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+main {
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  background-color: #f6f2f2;
+}
+
+.header-wrapper {
+  width: 100%;
+  color: #e0e0e0;
+  background-color: #313030;
+}
+.header-wrapper .menu nav {
+  justify-content: center;
+  display: flex;
+  padding: 45px 0;
+}
+.header-wrapper li {
+  list-style: none;
+}
+.header-wrapper li a {
+  padding: 44px 40px;
+  background-color: #313030;
+  border: 2px transparent solid;
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.header-wrapper li:hover a {
+  padding: 44px 40px;
+  background-color: #ff3f40;
+  border: 2px #ff3f40 solid;
+  color: #e0e0e0;
+}
+
+.banner {
+  width: 100%;
+  background-color: #f6f2f2;
+  padding: 100px 0;
+  margin-bottom: 110px;
+  display: flex;
+}
+.banner .banner-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.banner .banner-text {
+  width: 50%;
+}
+.banner .banner-text h1 {
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-size: 50px;
+  margin: -20px 0px 40px 0px;
+}
+.banner .banner-text p {
+  font-weight: 500;
+}
+.banner .banner-main-text {
+  margin-bottom: 60px;
+}
+.banner .banner-button {
+  border: 2px transparent solid;
+  padding: 11px 0px;
+  border-radius: 5px;
+}
+.banner button a {
+  padding: 10px 75px;
+  background-color: #ff3f40;
+  border: 2px transparent solid;
+  color: #e0e0e0;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+.banner button:hover a {
+  padding: 10px 75px;
+  background-color: #f6f2f2;
+  border: 2px #ff3f40 solid;
+  color: #ff3f40;
+}
+.banner .banner-video {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.banner .banner-promo-video {
+  width: 550px;
+  height: 360px;
+  box-shadow: black -3px 2px 20px 0px;
+}
+
+.offers {
+  margin-bottom: 50px;
+}
+
+.offers-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid #ececec;
+}
+.offers-wrapper .offers-left-part {
+  width: 50%;
+}
+.offers-wrapper .offers-left-part h2 {
+  text-transform: uppercase;
+  margin-bottom: 35px;
+  font-size: 42px;
+  font-weight: 600;
+}
+.offers-wrapper .offers-text {
+  margin-bottom: 35px;
+}
+.offers-wrapper .offers-button {
+  border: 2px #ff3f40 solid;
+  padding: 11px 0px;
+  border-radius: 5px;
+}
+.offers-wrapper .offers-button a {
+  padding: 10px 70px;
+  background-color: white;
+  border: 2px transparent solid;
+  color: #ff3f40;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+.offers-wrapper .offers-button:hover a {
+  padding: 10px 70px;
+  background-color: #ff3f40;
+  border: 2px #ff3f40 solid;
+  color: white;
+}
+.offers-wrapper .offers-right-part {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.offers-wrapper .offers-right-part svg {
+  margin-bottom: 10px;
+}
+.offers-wrapper .offers-right-part h3 {
+  margin-bottom: 10px;
+}
+.offers-wrapper .offers-right-part div {
+  width: 50%;
+  padding: 20px 40px;
+  margin-bottom: 50px;
+}
+
+.features-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.features-wrapper h2 {
+  text-transform: uppercase;
+  font-size: 42px;
+  margin-bottom: 35px;
+}
+.features-wrapper .features-text {
+  margin-bottom: 30px;
+}
+.features-wrapper .features-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.features-wrapper .horizontal-line {
+  border-bottom: 1px #ff3f40 solid;
+  box-shadow: -1px -1px 2px 1px #ff3f40;
+  margin: 30px 530px 75px;
+}
+.features-wrapper .features-menu {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  margin-bottom: 60px;
+}
+.features-wrapper .features-menu li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #313030;
+}
+.features-wrapper .features-menu li a:hover {
+  color: #ff3f40;
+}
+.features-wrapper .features-images {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.features-wrapper img {
+  width: 25%;
+  padding-bottom: 20px;
+}
+.features-wrapper img:not(:nth-child(4n+4)) {
+  padding-right: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
